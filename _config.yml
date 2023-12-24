@@ -1,6 +1,34 @@
 #theme: jekyll-theme-minimal
+plugins:
+- jekyll-scholar
 
 # site settings
 
 title: E. Wes Bethel
 description: Github pages home for Bethel's personal website
+
+# from: https://zhepeiw.com/2018/12/23/blog1.html
+scholar:
+
+  last_name: Bethel
+  first_name: E. Wes
+
+  style: apa
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: /_bibliography/
+  bibliography: references.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+#  details_dir: bibliography
+#  details_layout: bibtex.html
+#  details_link: Details
+
+  query: "@*"
+
