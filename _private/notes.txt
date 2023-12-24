@@ -1,0 +1,23 @@
+
+https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll#installing-jekyll
+
+
+https://rossney.net/articles/a-beginners-guide-to-chruby/
+https://eregon.me/blog/2021/06/04/review-of-ruby-installers-and-switchers.html
+https://stackoverflow.com/questions/22153521/what-are-the-differences-between-rbenv-rvm-and-chruby
+https://github.com/postmodern/chruby#configuration
+https://jekyllrb.com/docs/installation/macos/
+
+https://open-research.gemmadanks.com/tutorials/how-to-use-jekyll-scholar-with-github-pages/
+https://martinopilia.com/posts/2020/02/22/migration.html - workflow jekyll scholar
+
+https://github.com/inukshuk/jekyll-scholar  - pubs formatting
+
+
+12/23/2023
+couldn't make chruby or rbenv work right: these assume you are using sh or zsh
+and the install scripts/instructions don't tell you how to set things up for csh
+
+Just did a manual path adjutment to ~/.rubies/ruby-3.2.2/bin after doing updates/upgrades
+
+
