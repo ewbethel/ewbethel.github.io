@@ -13,11 +13,36 @@ https://martinopilia.com/posts/2020/02/22/migration.html - workflow jekyll schol
 
 https://github.com/inukshuk/jekyll-scholar  - pubs formatting
 
+https://pages.lip6.fr/Pascal.Poizat/blog/posts/2016/02/01/jekyll-and-bibtex/
 
 12/23/2023
 couldn't make chruby or rbenv work right: these assume you are using sh or zsh
 and the install scripts/instructions don't tell you how to set things up for csh
 
 Just did a manual path adjutment to ~/.rubies/ruby-3.2.2/bin after doing updates/upgrades
+
+
+12/25/2023
+
+zero to github pages site with bibex entries
+
+doing init sequence shown here:
+https://jekyllrb.com/
+
+gem install bundler jekyll
+
+
+Add the jekyll-scholar gem 
+See https://github.com/inukshuk/jekyll-scholar
+add to Gemfile: 
+gem 'jekyll-scholar', group: :jekyll_plugins
+
+Make tweaks to minima theme, check
+https://github.com/jekyll/minima
+
+See
+https://bartjolling.github.io/blog/2018/11/24/customizing-jekyll-minima-github-pages.html
+
+mkdir ewbethel.github.io/_includes
 
 

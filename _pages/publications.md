@@ -1,11 +1,15 @@
 ---
-title: "E. Wes Bethel - Publications"
+title: "Publications"
 # layout: gridlay
-layout: article
+#layout: article
+layout: page
 # excerpt: "Machine Learning & Analytics Group -- Publications."
 # sitemap: false
 permalink: /publications/
 ---
-# Publications
+
 
 {% bibliography -g year -G descending %}
+
+
+More coming soon
