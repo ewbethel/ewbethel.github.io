@@ -9,7 +9,7 @@ permalink: /publications/
 ---
 
 
-{% bibliography -g year -G descending %}
+
+{% bibliography -g year -G descending %} 
 
 
-More coming soon

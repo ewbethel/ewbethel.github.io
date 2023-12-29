@@ -44,5 +44,55 @@ See
 https://bartjolling.github.io/blog/2018/11/24/customizing-jekyll-minima-github-pages.html
 
 mkdir ewbethel.github.io/_includes
+copied a bunch of files from the minima site into _includes and tweaked them
+eg, commented out everything from footer.html to make the verbose footer on the generated site go away
+
+12/27/2023
+
+Problems with the build at github:
+Error: Liquid syntax error (line 1): Unknown tag 'bibliography'
+build github-pages can't satisfy your Gemfile's dependencies.
+
+problem seems to be not having ruby loaded and configured over at github
+
+The fix was to make changes to the workflow script
+
+Transplanted the jobs:build: section from here:
+https://github.com/gemmadanks/gemmadanks.github.io/blob/main/.github/workflows/jekyll.yml
+
+This resulted in a successful build, but then the deploy stage failed
+
+Using https://github.com/gemmadanks/gemmadanks.github.io/blob/main/.github/workflows/jekyll.yml as a guide, changed this line:
+deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+>>>>        uses: actions/deploy-pages@v4   # from default workflow template
+>>>>        uses: actions/deploy-pages@v1   # changed to this line, then deployment works!!
 
 
+12/28/2023
+
+Fixed up my own .bib file which contained multiple bugs that worked ok with LaTeX but that
+seem to cause problems with jekyll-scholar
+
+attempting to work with multiple *bib files
+
+Some hints here: 
+https://github.com/inukshuk/jekyll-scholar/issues/144
+
+eg: bibliography --file a.bib --file b.bib --file c.bib
+
+Attempts to use filename glob to produces one implicit source doesn't seem to work
+see https://github.com/inukshuk/jekyll-scholar/blob/main/README.md
+under "option bibliography"
+
+Next steps before push:
+- URLs: want links working
+- Font face/size
+- footer? include github, scholar
