@@ -1,0 +1,46 @@
+---
+---
+<div class="text-justify">
+{{reference }}
+{% if entry.note %}    
+{{entry.note | replace: "Best paper award", "<b>Best paper award</b>"}}.
+{% endif %}
+</div>
+{% assign key = entry.key | replace: "_","_0_" | replace: ":","_1_" | replace: "/","_2_" | replace: "-", "_3_" | replace: ".", "_4_" %} 
+<button class="button0"  onclick="toggleBibtex{{key}}()">BibTeX</button>
+
+{% if entry.doi %}
+    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="Publisher Version" /></a>
+{% endif %}
+
+{% if entry.escholarshipurl %}
+    <a href="{{ entry.escholarshipurl }}"><input class="button2" type="button" value="eScholarship Preprint" /></a>
+{% endif %}
+
+{% if entry.eprint %}
+  {% if entry.eprint contains "arXiv:" %}
+    <a href="{{ entry.eprint | replace: "arXiv:", "https://arxiv.org/abs/" }}"><input class="button2" type="button" value="arXiv Preprint"/></a>
+  {% endif %}
+{% endif %}
+
+{% if link %}
+    <a href="{{ link }}"><input class="button4" type="button" value="Local Preprint" /></a>
+{% endif %}
+
+{% if entry.code %}
+    <a href="{{ entry.code }}"><input class="button3" type="button" value="code" /></a>
+{% endif %}
+<div id="a{{key}}" style="display: none;">
+<pre>{{entry.bibtex}}</pre>
+</div>
+<script>
+function toggleBibtex{{key}}(parameter) {
+    var x= document.getElementById('a{{key}}');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+
