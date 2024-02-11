@@ -8,7 +8,7 @@ permalink: /teaching/
 
 ### 2024, Spring @ SFSU
 
-CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 11:00-12:15, Thornton Hall 335 (in person).  
+CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 11:00-12:15, HUM 109 (in person).  
 
 CSC 647/747 --  Introduction to Quantum Computing and Quantum Information Science (senior and graduate level paired course). Introduction to quantum computing and quantum information science. Comparison of classical and quantum computing architectures and organization. Quantum algorithm design and implementation on circuit-based and annealing quantum platforms. Program execution and performance analysis on quantum platform simulators and actual quantum hardware, subject to availability. Survey of research topics in quantum computing ranging from algorithms (e.g., Grover's Search) and their application to problems in quantum cryptography, quantum machine learning, and hybrid classical/quantum algorithms. Tu-Th HSS 246 (in person).
 Taught jointly with Prof. Dan Huang (CS@SFSU).
@@ -18,10 +18,10 @@ Taught jointly with Prof. Dan Huang (CS@SFSU).
 ### 2023, Fall @ SFSU
 
 
-CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 11:00-12:15, Thornton Hall 326 (in person).  
+CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 11:00-12:15, TH 326 (in person).  
 
 
-CSC 746 -- High Performance Computing (graduate level). Principles and current practices in high-performance computing. Basics of multiprocessor systems such as clusters and graphics processors. Message-passing and shared memory-based software development. Tu/Th, 12:30-13:45, Hensill Hall 301 (in person).  
+CSC 746 -- High Performance Computing (graduate level). Principles and current practices in high-performance computing. Basics of multiprocessor systems such as clusters and graphics processors. Message-passing and shared memory-based software development. Tu/Th, 12:30-13:45, HH 301 (in person).  
 
 
 ---
