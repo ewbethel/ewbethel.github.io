@@ -7,3 +7,21 @@
 #
 layout: home
 ---
+
+<table style="width:100%; border:none;">
+<tr style="border:none">
+<td style="border:none; width:70%">
+E. Wes Bethel is an Associate Professor in the 
+<a href="https://cs.sfs.edu/">Computer Science Department at San Francisco State University</a>,
+a Research Affiliate at 
+<a href="https://www.lbl.gov">Lawrence Berkeley National Laboratory</a>,
+and an
+<a href="https://awards.acm.org/award-recipients/bethel_3127172">ACM Distinguished Member</a>.
+His research interests include high performance computing, advanced computational architectures and technologies, quantum computing, data science, machine learning and its applications, scientific visualization, and computer graphics.
+</td>
+<td style="border:none; width:30%">
+<img style="display: block; margin: auto;" src="assets/bethel_biopic.jpg"/>
+</td>
+</tr>
+</table>
+
