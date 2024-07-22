@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
+gemspec
 
+gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 
-gem 'jekyll'
-gem 'jekyll-scholar'
-
-gem "webrick", "~> 1.7"
-gem "minima", "~> 2.5"
-
-
+gem "jekyll-scholar", group: :jekyll_plugins
+gem "webrick"
