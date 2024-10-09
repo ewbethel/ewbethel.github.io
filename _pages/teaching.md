@@ -6,7 +6,7 @@ permalink: /teaching/
 
 ### 2024, Fall @ SFSU
 
-CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 14:00-15:15, HUM 126 (in person).  
+CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 14:00-15:15, BH 1 (in person).  
 
 CSC 746 -- High Performance Computing (graduate level). Principles and current practices in high-performance computing. Basics of multiprocessor systems such as clusters and graphics processors. Message-passing and shared memory-based software development. Tu/Th, 15:30-16:45, TH 425 (in person).  
 
