@@ -4,6 +4,13 @@ layout: page
 permalink: /teaching/
 ---
 
+
+### 2025, Spring @ SFSU
+
+CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 15:30-16:45 (via zoom, online).
+
+---
+
 ### 2024, Fall @ SFSU
 
 CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Tu/Th, 14:00-15:15, BH 1 (in person).  
