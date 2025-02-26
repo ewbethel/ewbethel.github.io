@@ -14,19 +14,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:  # Single job - Corrected
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '3.2'  # Or your Ruby version
           bundler-cache: true
       - uses: actions/configure-pages@v2
       - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - uses: actions/deploy-pages@v2  # Deploy directly from _site
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: './_site'  # Correct and necessary
-          artifact_name: github-pages # Specify the artifact name
+          name: github-pages  # Important: Name the artifact
+          path: './_site'    # Upload the _site directory
+      - uses: actions/deploy-pages@v2
+        with:
+          artifact: github-pages  # Deploy the named artifact
