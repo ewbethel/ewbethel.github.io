@@ -49,6 +49,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
+          path: ./_site   # 2/26/2025 copilot suggestion
 
   # Deployment job
   deploy:
