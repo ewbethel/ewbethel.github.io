@@ -29,3 +29,4 @@ jobs:
       - uses: actions/deploy-pages@v2  # Deploy directly from _site
         with:
           path: './_site'  # Correct and necessary
+          artifact_name: github-pages # specify the artifact name
