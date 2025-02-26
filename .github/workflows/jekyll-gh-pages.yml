@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:  # Single job
+  build-and-deploy:  # Single job - Corrected
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,6 +26,6 @@ jobs:
       - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - uses: actions/deploy-pages@v2  # Deploy directly after build
+      - uses: actions/deploy-pages@v2  # Deploy directly from _site
         with:
-          path: './_site'  # Deploy from the _site directory
+          path: './_site'  # Correct and necessary
