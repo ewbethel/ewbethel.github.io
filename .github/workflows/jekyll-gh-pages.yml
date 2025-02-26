@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'  # Or your Ruby version
+          ruby-version: '3.2' # Or your Ruby version
           bundler-cache: true
       - uses: actions/configure-pages@v2
       - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -28,8 +28,6 @@ jobs:
           JEKYLL_ENV: production
       - uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages  # Important: Name the artifact
-          path: './_site'    # Upload the _site directory
-      - uses: actions/deploy-pages@v2
-        with:
-          artifact: github-pages  # Deploy the named artifact
+          name: github-pages # This name is important, but not directly used by deploy-pages@v2
+          path: './_site'   # This path is crucial - it packages the _site directory
+      - uses: actions/deploy-pages@v2  # This action automatically finds the artifact from the same workflow run
