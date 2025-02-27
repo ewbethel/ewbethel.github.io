@@ -22,17 +22,22 @@ jobs:
         with:
           ruby-version: '3.2' # Or your Ruby version
           bundler-cache: true
+
       - uses: actions/configure-pages@v2
-      - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - run: bundle exec jekyll build -v --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
       - name: Verify _site directory
         run: ls -al _site
+
       - uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages # This name is important, but not directly used by deploy-pages@v2
           path: './_site'   # This path is crucial - it packages the _site directory
-      - name: Get artifact URL
-        if: always()
-           run: echo "Artifact URL: ${{ steps.upload_artifact.outputs.url }}"
+
+#      - name: Get artifact URL
+#        if: always()
+#           run: echo "Artifact URL: ${{ steps.upload_artifact.outputs.url }}"
+
       - uses: actions/deploy-pages@v2  # This action automatically finds the artifact from the same workflow run
