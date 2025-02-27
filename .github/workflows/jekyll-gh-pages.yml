@@ -51,3 +51,7 @@ jobs:
 #           run: echo "Artifact URL: ${{ steps.upload_artifact.outputs.url }}"
 
       - uses: actions/deploy-pages@v2  # This action automatically finds the artifact from the same workflow run
+        with:
+          artifact_name: github-pages
+
+# EOF
