@@ -28,8 +28,18 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Verify _site directory
-        run: ls -al _site
+#      - name: Verify _site directory
+#        run: ls -al _site
+
+      - name: Verify _site directory contents
+        run: |
+        if [ -d "./_site" ]; then
+          echo "_site directory exists"
+          ls -al ./_site
+        else
+          echo "_site directory does not exist"
+          exit 1
+        fi
 
       - uses: actions/upload-pages-artifact@v3
         with:
