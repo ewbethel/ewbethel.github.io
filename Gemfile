@@ -17,4 +17,6 @@ end
 
 gem "stringio", "~> 3.0" # Add stringio to ensure compatibility
 gem 'bigdecimal', '3.1.8' # force specific version 
-
+gem 'logger'
+gem 'csv'
+gem 'base64'
