@@ -34,5 +34,5 @@ jobs:
           path: './_site'   # This path is crucial - it packages the _site directory
       - name: Get artifact URL
         if: always()
-        run: echo "Artifact URL: ${{ steps.upload_artifact.outputs.url }}"
+           run: echo "Artifact URL: ${{ steps.upload_artifact.outputs.url }}"
       - uses: actions/deploy-pages@v2  # This action automatically finds the artifact from the same workflow run
