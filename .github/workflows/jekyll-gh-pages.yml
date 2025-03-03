@@ -46,6 +46,11 @@ jobs:
           name: github-pages # This name is important, but not directly used by deploy-pages@v2
           path: './_site'   # This path is crucial - it packages the _site directory
 
+
+      - name: Debug artifact URL
+        run: echo "Artifact URL: ${{ steps.upload-pages-artifact.outputs.url }}"
+
+
 #      - name: Get artifact URL
 #        if: always()
 #           run: echo "Artifact URL: ${{ steps.upload_artifact.outputs.url }}"
