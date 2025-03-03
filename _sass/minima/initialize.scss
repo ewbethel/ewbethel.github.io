@@ -1,26 +1,39 @@
 @charset "utf-8";
+// Import pre-styling-overrides hook and style-partials.
+@use  "minima/variables" as vars;  // wes 3/2/25
+
+@use  "minima/custom-variables"; // Hook to override predefined variables.
+@use  "minima/base";             // Defines element resets.
+
+@use  "minima/layout";           // Defines structure and style based on CSS selectors.
+@use  "minima/custom-styles";     // Hook to override existing styles.
+
+@debug "Loading initialize.scss";
+@debug "Base font size is: #{vars.$base-font-size}";
+//@debug "Base font size is: #{$base-font-size}";
 
 // Define defaults for each variable.
+// moved to _variables.scss, wes 3/2/2025
 
-$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
-$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-$spacing-unit:     30px !default;
-
-$table-text-align: left !default;
-
-// Width of the content area
-$content-width:    800px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
-$on-medium:        $on-palm !default;
-$on-large:         $on-laptop !default;
+//$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+//$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+//$base-font-size:   16px !default;
+//$base-font-weight: 400 !default;
+//$small-font-size:  $base-font-size * 0.875 !default;
+//$base-line-height: 1.5 !default;
+//
+//$spacing-unit:     30px !default;
+//
+//$table-text-align: left !default;
+//
+//// Width of the content area
+//$content-width:    800px !default;
+//
+//$on-palm:          600px !default;
+//$on-laptop:        800px !default;
+//
+//$on-medium:        $on-palm !default;
+//$on-large:         $on-laptop !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -31,20 +44,22 @@ $on-large:         $on-laptop !default;
 // }
 // Notice the following mixin uses max-width, in a deprecated, desktop-first
 // approach, whereas media queries used elsewhere now use min-width.
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
 
-@mixin relative-font-size($ratio) {
-  font-size: #{$ratio}rem;
-}
+// wb 3/2/2025, migrated to variables.scss
+//@mixin media-query($device) {
+//  @media screen and (max-width: $device) {
+//    @content;
+//  }
+//}
 
-// Import pre-styling-overrides hook and style-partials.
-@import
-  "minima/custom-variables", // Hook to override predefined variables.
-  "minima/base",             // Defines element resets.
-  "minima/layout",           // Defines structure and style based on CSS selectors.
-  "minima/custom-styles"     // Hook to override existing styles.
-;
+//@mixin relative-font-size($ratio) {
+//  font-size: #{$ratio}rem;
+//}
+
+ // Import pre-styling-overrides hook and style-partials.
+//@import
+//  "minima/custom-variables", // Hook to override predefined variables.
+//  "minima/base",             // Defines element resets.
+//  "minima/layout",           // Defines structure and style based on CSS selectors.
+//  "minima/custom-styles"     // Hook to override existing styles.
+//;

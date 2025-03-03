@@ -1,5 +1,8 @@
+@use "minima/variables" as vars;
+@use "minima/skins/auto" as auto;
+
 html {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
 }
 
 /**
@@ -19,9 +22,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  font: vars.$base-font-weight #{vars.$base-font-size}/#{vars.$base-line-height} vars.$base-font-family;
+  color: auto.$text-color;
+  background-color: auto.$background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -43,12 +46,12 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: vars.$spacing-unit * .5;
 }
 
 hr {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: vars.$spacing-unit;
+  margin-bottom: vars.$spacing-unit;
 }
 
 /**
@@ -78,7 +81,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: vars.$small-font-size;
 }
 
 
@@ -87,7 +90,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: vars.$spacing-unit;
 }
 
 li {
@@ -103,7 +106,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: vars.$base-font-weight;
 }
 
 
@@ -112,15 +115,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $link-base-color;
+  color: auto.$link-base-color;
   text-decoration: none;
 
   &:visited {
-    color: $link-visited-color;
+    color: auto.$link-visited-color;
   }
 
   &:hover {
-    color: $link-hover-color;
+    color: auto.$link-hover-color;
     text-decoration: underline;
   }
 
@@ -138,10 +141,10 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $brand-color;
-  border-left: 4px solid $border-color-01;
-  padding-left: $spacing-unit * .5;
-  @include relative-font-size(1.125);
+  color: auto.$brand-color;
+  border-left: 4px solid auto.$border-color-01;
+  padding-left: vars.$spacing-unit * .5;
+  @include vars.relative-font-size(1.125);
   font-style: italic;
 
   > :last-child {
@@ -160,11 +163,11 @@ blockquote {
  */
 pre,
 code {
-  font-family: $code-font-family;
+  font-family: vars.$code-font-family;
   font-size: 0.9375em;
-  border: 1px solid $border-color-01;
+  border: 1px solid auto.$border-color-01;
   border-radius: 3px;
-  background-color: $code-background-color;
+  background-color: auto.$code-background-color;
 }
 
 code {
@@ -184,11 +187,11 @@ pre {
 
 .highlight {
   border-radius: 3px;
-  background: $code-background-color;
+  background: auto.$code-background-color;
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: $code-background-color;
+    background: auto.$code-background-color;
   }
 }
 
@@ -198,18 +201,10 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit * .5;
-  padding-left: $spacing-unit * .5;
+  max-width: vars.$content-width;
+  margin: 0 auto;
+  padding: 0 vars.$spacing-unit;
   @extend %clearfix;
-
-  @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-  }
 }
 
 
@@ -243,6 +238,7 @@ pre {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
+  overflow: visible;
 }
 
 
@@ -250,29 +246,29 @@ pre {
  * Tables
  */
 table {
-  margin-bottom: $spacing-unit;
+  margin-bottom: vars.$spacing-unit;
   width: 100%;
-  text-align: $table-text-align;
-  color: $table-text-color;
+  text-align: vars.$table-text-align;
+  color: auto.$table-text-color;
   border-collapse: collapse;
-  border: 1px solid $table-border-color;
+  border: 1px solid auto.$table-border-color;
   tr {
     &:nth-child(even) {
-      background-color: $table-zebra-color;
+      background-color: auto.$table-zebra-color;
     }
   }
   th, td {
-    padding: ($spacing-unit * 33.3333333333 * .01) ($spacing-unit * .5);
+    padding: (vars.$spacing-unit * 33.3333333333 * .01) (vars.$spacing-unit * .5);
   }
   th {
-    background-color: $table-header-bg-color;
-    border: 1px solid $table-header-border;
+    background-color: auto.$table-header-bg-color;
+    border: 1px solid auto.$table-header-border;
   }
   td {
-    border: 1px solid $table-border-color;
+    border: 1px solid auto.$table-border-color;
   }
 
-  @include media-query($on-laptop) {
+  @include vars.media-query(vars.$on-laptop) {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
