@@ -4,6 +4,15 @@ layout: page
 permalink: /teaching/
 ---
 
+### 2025, Fall @ SFSU
+
+CSC 656 -- Computer Organization (senior level). Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. 
+Tu/Th, 14:00-15:15, hybrid online and in person. In person on Tuesdays in HSS 213, online on Thursdays via zoom, check the CSC 656 F25 Canvas page for the zoom link.
+
+CSC 746 -- High Performance Computing (graduate level). Principles and current practices in high-performance computing. Basics of multiprocessor systems such as clusters and graphics processors. Message-passing and shared memory-based software development. 
+Tu/Th, 15:30-16:45, hybrid online and in person. In person on Tuesdays in Thornton 428, online on Thursdays via zoom, check the CSC 746 F25 Canvas page for the zoom link.
+
+---
 
 ### 2025, Spring @ SFSU
 
