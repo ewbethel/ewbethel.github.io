@@ -11,7 +11,7 @@ layout: home
 <table style="width:100%; border:none;">
 <tr style="border:none">
 <td style="border:none; width:70%">
-E. Wes Bethel is an Associate Professor in the 
+E. Wes Bethel is a Professor in the 
 <a href="https://cs.sfs.edu/">Computer Science Department at San Francisco State University</a>,
 a Research Affiliate at 
 <a href="https://www.lbl.gov">Lawrence Berkeley National Laboratory</a>,
