@@ -4,7 +4,7 @@ layout: page
 permalink: /teaching/
 ---
 
-### 2026, Fall @ SFSU
+### 2026, Spring @ SFSU
 
 CSC 647/747 --  Introduction to Quantum Computing and Quantum Information Science (senior and graduate level paired course). Introduction to quantum computing and quantum information science. Comparison of classical and quantum computing architectures and organization. Quantum algorithm design and implementation on circuit-based and annealing quantum platforms. Program execution and performance analysis on quantum platform simulators and actual quantum hardware, subject to availability. Survey of research topics in quantum computing ranging from algorithms (e.g., Grover's Search) and their application to problems in quantum cryptography, quantum machine learning, and hybrid classical/quantum algorithms. 
 Tu/Th, 15:30-16:45, hybrid online and in person. In person on Tuesdays in Hensill Hall 543, online on Thursdays via zoom, check the CSC 647/747 S26 Canvas page for the zoom link.
