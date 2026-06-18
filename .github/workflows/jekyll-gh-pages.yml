@@ -24,8 +24,8 @@ jobs:
           bundler-cache: true
 
       - name: Configure GitHub Pages
-         id: pages
-         uses: actions/configure-pages@v5
+        id: pages
+        uses: actions/configure-pages@v5
       
 #      - uses: actions/configure-pages@v5
       - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
